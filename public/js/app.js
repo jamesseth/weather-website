@@ -19,12 +19,12 @@ weatherForm.addEventListener('submit', (event) => {
             if(data.error){
                 console.error(data.error)
             }else{
-                console.log(data)
-            const weather = document.querySelector("#weather")
-            weather.appendChild(createElement('H5', data.location))
-            weather.appendChild(createElement('p', data.summary))
-            weather.appendChild(createElement('p', `Temperature: ${data.temperature}`))
-            weather.appendChild(createElement('p', `Chance Of Rain: ${data.chanceOfRain}%`))
+                
+                const weather = document.querySelector("#weather")
+                weather.appendChild(createElement('H5', data.location))
+                weather.appendChild(createElement('p', data.summary))
+                weather.appendChild(createElement('p', `Temperature: ${data.temperature}`))
+                weather.appendChild(createElement('p', `Chance Of Rain: ${data.chanceOfRain}%`))
 
             //    const location = document.createElement('h5').innerHTML = data.location
             //    const summary = document.createElement('p').innerHTML = `${data.summary}`
