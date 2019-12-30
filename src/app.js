@@ -1,6 +1,7 @@
 const express = require('express')
 const path = require('path')
 const app = express()
+const port = process.env.PORT || 3000
 const hbs = require('hbs')
 
 const forecast = require('./utils/forcast')
@@ -94,6 +95,6 @@ app.get('*', (req,res)=>{
 
 
 //start server
-app.listen(3000, () => {
-    console.log('Server is running... 0.0.0.0:3000')
+app.listen(port, () => {
+    console.log(`Server is running... 0.0.0.0:${port}`)
 })
